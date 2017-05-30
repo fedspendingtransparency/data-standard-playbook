@@ -18,8 +18,10 @@
       </a>
       {% endif %}
 
-      {{ hero.content | markdownify }}
-
+      {% if here.content %}
+        {{ hero.content | markdownify }}
+      {% endif %}
+      
       {% if hero.button %}
       <a class="usa-button usa-button-big usa-button-secondary"
         href="{{ hero.button.href | relative_url }}">
